@@ -8,16 +8,14 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-use OC\PlatformBundle\Entity\Advert;
-use OC\PlatformBundle\Entity\Image;
-use OC\PlatformBundle\Entity\Application;
-use OC\PlatformBundle\Entity\AdvertSkill;
-
 
 class AdvertController extends Controller
 {
+
     public function indexAction($page)
     {
+        $test = 'test';
+        
         // Notre liste d'annonce en dur
         $listAdverts = array(
           array(
@@ -229,7 +227,7 @@ class AdvertController extends Controller
           'listAdverts' => $listAdverts
         ));
     }
-    
+
     public function listAction()
     {
       $listAdverts = $this
